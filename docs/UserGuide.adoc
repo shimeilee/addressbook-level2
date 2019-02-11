@@ -156,6 +156,11 @@ Views all details of the 1st person in the results of the `find` command.
 Clears all entries from the address book. +
 Format: `clear`
 
+== Views all past commands: `history`
+
+Retrieves the last command entered into the address book.
+Format: `history`
+
 == Exiting the program : `exit`
 
 Exits the program. +
