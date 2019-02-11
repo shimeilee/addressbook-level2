@@ -22,6 +22,7 @@ import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.commands.ListCommand;
 import seedu.addressbook.commands.ViewAllCommand;
 import seedu.addressbook.commands.ViewCommand;
+import seedu.addressbook.commands.HistoryCommand;
 import seedu.addressbook.data.exception.IllegalValueException;
 
 /**
@@ -84,7 +85,7 @@ public class Parser {
 
         case FindCommand.COMMAND_WORD:
             return prepareFind(arguments);
-
+            
         case ListCommand.COMMAND_WORD:
             return new ListCommand();
 
@@ -96,8 +97,11 @@ public class Parser {
 
         case ExitCommand.COMMAND_WORD:
             return new ExitCommand();
-
-        case HelpCommand.COMMAND_WORD: // Fallthrough
+        
+        case HistoryCommand.COMMAND_WORD:
+            return new HistoryCommand();
+            
+            case HelpCommand.COMMAND_WORD: // Fallthrough
         default:
             return new HelpCommand();
         }
